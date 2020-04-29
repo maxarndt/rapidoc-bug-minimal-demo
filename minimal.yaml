@@ -1,0 +1,30 @@
+openapi: '3.0.5'
+info:
+  title: Test
+  version: 0.0.1
+servers:
+  - url: https://test.lcl
+paths:
+  /events:
+    get:
+      operationId: getEvents
+      responses:
+        '200':
+          description: An array of events
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Events"
+components:
+  schemas:
+    Events:
+      type: array
+      items:
+        type: object
+        properties:
+          fileName:
+            type: string
+            example: file.txt
+      example:
+        - fileName: fileA.txt
+        - fileName: fileB.txt
