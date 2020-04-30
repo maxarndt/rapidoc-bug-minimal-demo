@@ -25,6 +25,11 @@ components:
           fileName:
             type: string
             example: file.txt
+          someDate:
+            type: string
+            format: date-time
       example:
         - fileName: fileA.txt
+          someDate: 2017-07-21T17:32:28Z
         - fileName: fileB.txt
+          someDate: 2020-04-20T18:11:14Z
